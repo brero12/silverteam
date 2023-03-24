@@ -1,0 +1,25 @@
+footer {
+    width: 100%;
+    position: relative;
+    bottom: 0px;
+}
+
+.footerWrap {
+    width: 75%;
+    margin: auto;
+}
+
+.footerContent {
+    float: left;
+    width: 100%;
+    background-color: #002E2B;
+    padding: 10px 0;
+    border-radius: 25% 10%;
+}
+
+.footerWrap p {
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
