@@ -117,3 +117,9 @@
 .transparentcards h3 {
     color: whitesmoke;
 }
+
+.memorycard{
+	max-width: 462px;
+	margin: 0px;
+	padding: 4px 0px;
+}

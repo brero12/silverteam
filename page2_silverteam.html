@@ -11,17 +11,16 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
 
-    <link rel="stylesheet" href="css/memory.css" /> 
-    
+    <link rel="stylesheet" href="css/memory.css" />
+
     <script src="script/memory.js"></script>
-    
   </head>
   <body>
     <header>
       <div class="banner">
         <img alt="" src="images/Banner.png" />
       </div>
-      
+
       <nav class="navbar">
         <ul class="nav-links">
           <input type="checkbox" id="checkbox_toggle" />
@@ -50,9 +49,29 @@
       </nav>
     </header>
 
-    <section class="gameBoard">      
-      <h1>Memory Game</h1>
-      <div id="container"></div>       
+    <section class="gameBoard">
+      <div class="container">
+      <div class="transparentcards">
+        <h3>Rules for Memory Game</h3>
+        <ol>
+          <li>The scope consists of n different image card types with pairs of cards that have the same image.</li>
+          <li>
+            Each turn, you flip over two cards (one at a time, so you can see the first one before picking the second).
+          </li>
+          <li>
+            If the two cards match, then they are keep shown on the screen, otherwise, they are returned to hide.
+          </li>
+          <li>
+            The game ends when all the cards are keep shown on the screen.
+          </li>
+        </ol>
+      </div>
+
+      <div class="transparentcards memorycard">
+        Time in game: <label id="minutes">00</label>:<label id="seconds">00</label>
+      <div id="gamecontainer"></div>
+    </div>
+  </div>
     </section>
 
     <footer>
@@ -63,5 +82,4 @@
       </div>
     </footer>
   </body>
-  
 </html>

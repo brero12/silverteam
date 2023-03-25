@@ -78,8 +78,7 @@
     border-bottom: unset;
 }
 
-/* Reset Button */
-#but {
+#resetButton {
     box-sizing: border-box;
     width: 95px;
     height: 40px;
