@@ -66,7 +66,7 @@
 	font-family: courier, sans;
 }
 
-.card3 {
+.whitecard {
 	display: block;
 	top: 0px;
 	max-width: 262px;
@@ -81,21 +81,51 @@
 	cursor: pointer;
 }
 
-.card3 .go-corner {
+.whitecard .go-corner {
 	opacity: 0.7;
 }
 
-.card3:hover {
+.whitecard:hover {
 	border: 1px solid #002E2B;
 	box-shadow: 0px 0px 999px 999px rgba(255, 255, 255, 0.5);
 	z-index: 500;
 }
 
-.card3:hover p {
+.whitecard:hover p {
 	color: #002E2B;
 }
 
-.card3:hover .go-corner {
+.whitecard:hover .go-corner {
 	transition: opactiy 0.3s linear;
 	opacity: 1;
+}
+
+.transparentcards {
+	display: block;
+	top: 0px;
+	max-width: 262px;
+	background-color: transparent;
+	border-radius: 4px;
+	padding: 32px 24px;
+	margin: 12px;
+	text-decoration: none;
+	overflow: hidden;
+	height: 400px;
+	cursor: pointer;
+}
+
+.transparentcards h3 {
+    color: whitesmoke;
+}
+
+.memorycard{
+	max-width: 462px;
+	margin: 0px;
+	padding: 4px 0px;
+}
+
+.mathcard{
+	max-width: 462px;
+	margin: 0px;
+	padding: 0px;
 }
