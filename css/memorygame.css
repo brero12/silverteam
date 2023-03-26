@@ -47,3 +47,17 @@
       height: 10svh;
     }
   }
+
+  #resetButton {
+    box-sizing: border-box;
+    width: 65px;
+    height: 20px;
+    border: 1px solid #4c9e9e;
+    margin: auto;
+    border-radius: 4px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #4c9e9e;
+    color: white;
+    font-size: 12px;
+    cursor: pointer;
+}

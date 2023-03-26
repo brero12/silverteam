@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/footer.css" />
 
-    <link rel="stylesheet" href="css/memory.css" />
+    <link rel="stylesheet" href="css/memorygame.css" />
 
-    <script src="script/memory.js"></script>
+    <script src="script/memorygame.js"></script>
   </head>
   <body>
     <header>
@@ -62,14 +62,16 @@
             If the two cards match, then they are keep shown on the screen, otherwise, they are returned to hide.
           </li>
           <li>
-            The game ends when all the cards are keep shown on the screen.
+            The game ends when all the cards are keep shown on the screen. in that moment time will stop.
           </li>
         </ol>
       </div>
 
       <div class="transparentcards memorycard">
         Time in game: <label id="minutes">00</label>:<label id="seconds">00</label>
+        <button id="resetButton" onclick="resetGameBoard()">RESET</button>
       <div id="gamecontainer"></div>
+      
     </div>
   </div>
     </section>

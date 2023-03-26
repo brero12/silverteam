@@ -2,6 +2,7 @@ window.onload = function () {
 
     let images = [];
     let idcontrol = [];
+    let matches = 8;
 
     function rand() { return Math.floor(Math.random() * 90) };
 
@@ -53,25 +54,26 @@ window.onload = function () {
                 count++;                
                 imgBox.style.display = '';
                 imgBox.classList.add('face-up');
-                console.log(imgBox);
 
                 if (count === 1) {
                     guess1 = imgBox.getAttribute('src');
                     idGuess1 = imgBox.getAttribute('id');
-                    console.log(idGuess1);
                 }else{
                     guess2 = imgBox.getAttribute('src');
                     idGuess2 = imgBox.getAttribute('id');
-                    console.log(guess2);
-
-                    //console.log(idGuess1);
-                    //console.log(idGuess2);
+                    
                     if (guess1 === guess2) {
-                        console.log('match');
+                        //console.log('match');
                         document.getElementById(idGuess1).classList.add('match');
                         document.getElementById(idGuess2).classList.add('match');
+                        matches--;
+
+                        if(matches===0)
+                        {
+                            stopTimer();
+                        }
                     } else {
-                        console.log('miss');
+                        //console.log('miss');
                         
                         setTimeout(function () {
                             document.getElementById(idGuess1).style.display = 'none';
@@ -113,7 +115,7 @@ window.onload = function () {
     var minutesLabel = document.getElementById("minutes");
     var secondsLabel = document.getElementById("seconds");
     var totalSeconds = 0;
-    setInterval(setTime, 1000);
+    let timer = setInterval(setTime, 1000);
 
     function setTime() {
     ++totalSeconds;
@@ -129,4 +131,12 @@ window.onload = function () {
             return valString;
         }
     }
+
+    function stopTimer(){
+        clearInterval(timer);
+    }
+}
+
+function resetGameBoard(){
+    location.reload();
 }
