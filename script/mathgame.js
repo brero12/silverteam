@@ -29,7 +29,7 @@ document.getElementById("startreset").innerHTML = "Reset Game";
 		startCountdown();
 		
 		//generate quetion
-		generateQA();
+		generateQuestion();
 		
 	}
 }
@@ -47,7 +47,7 @@ document.getElementById("scorevalue").innerHTML = score;
 			setTimeout(function(){
 				hide("correct");
 			}, 1000);
-			generateQA();
+			generateQuestion();
 			
 		}else{
 			//wrong answer
@@ -99,13 +99,40 @@ function hide(Id){
 function show(Id) {
 	document.getElementById(Id).style.display = "inline-block";
 }
-//guestion
-function generateQA(){
+
+//question
+
+//operators
+var operators = [{
+	sign: "+",
+	method: function(a,b){ return a + b; }
+},{
+	sign: "-",
+	method: function(a,b){ return a - b; }
+},{
+	sign: "*",
+	method: function(a,b){ return a * b; }
+},{
+	sign: "/",
+	method: function(a,b){ return a / b; }
+}];
+
+
+function round(value, precision) {
+    var multiplier = Math.pow(10, precision || 0);
+    return Math.round(value * multiplier) / multiplier;
+}
+
+function generateQuestion(){
+
+	var selectedOperator = Math.floor(Math.random()*operators.length);
+	
 	var x = 1+ Math.round(9*Math.random());
 	var y = 1+ Math.round(9*Math.random());
-	correctAnswer = x*y;
+	correctAnswer = operators[selectedOperator].method(x, y);
+	correctAnswer = round(correctAnswer,1);
 	
-document.getElementById("question").innerHTML = x + "x" + y;
+document.getElementById("question").innerHTML = x + operators[selectedOperator].sign + y;
 var correctPosition = 1+ Math.round(3*Math.random());
 	
 document.getElementById("box"+correctPosition).innerHTML = correctAnswer;//correct answer
@@ -117,9 +144,13 @@ document.getElementById("box"+correctPosition).innerHTML = correctAnswer;//corre
 		if (i != correctPosition) {
 			var wrongAnswer;
 			do{
-				wrongAnswer = (1+
-Math.round(9*Math.random()))*(1+
-Math.round(9*Math.random()));//wrong answer
+				
+				wrongAnswer = operators[selectedOperator].method((1+
+					Math.round(9*Math.random())), (1+
+						Math.round(9*Math.random())));//wrong answer
+
+						console.log(round(wrongAnswer,1));
+						wrongAnswer = round(wrongAnswer,1)
 				
 }while(answers.indexOf(wrongAnswer)>-1)
 			
