@@ -12,39 +12,44 @@
     <link rel="stylesheet" href="css/footer.css" />
 </head>
 <body>
-<header>
+<header class="nav-no-js">
   <div class="banner">
     <img alt="" src="images/Banner.png">
   </div> 
 
-  <nav class="navbar">
-    <ul class="nav-links">
-      <input type="checkbox" id="checkbox_toggle" />
-      <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-        <div class="menu">
-          <li><a href="index.html">Home</a></li>
-          <li class="services">
-            <a href="/">Brain Exercise</a>
-            <ul class="dropdown">
+  <a href="#" class="nav-button">Menu</a>
+
+<nav class="nav">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-submenu"><a href="#">Brain Exercise</a>
+            <ul>
               <li><a href="page2_silverteam.html">Game 1</a></li>
               <li><a href="page3_silverteam.html">Game 2</a></li>
               <li><a href="page4_silverteam.html">Game 3</a></li>
             </ul>
-          </li>
-          <li class="services">
-            <a href="/">Card 2</a>
+        </li>
+        <li class="nav-submenu"><a href="#">Card 2</a>
             <ul class="dropdown">
-              <li><a href="/">Gallery 1 </a></li>
-              <li><a href="/">Gallery 2</a></li>
+                <li><a href="/">Gallery 1 </a></li>
+                <li><a href="/">Gallery 2</a></li>
             </ul>
-            </li>
-          <li><a href="/">Doc</a></li>
-          <li><a href="/">About</a></li>
-      </div>
+        </li>
+        <li class="nav-submenu"><a href="#">Card 3</a>
+            <ul>
+                <li><a href="#">Christmas</a></li>
+                <li><a href="#">New Year</a></li>
+                <li><a href="#">Easter</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Doc</a></li>
+        <li><a href="#">About</a></li>
     </ul>
-  </nav>
+</nav>
 
-</header>    
+<a href="#" class="nav-close">Close Menu</a>
+
+</header>   
 <!---->
 <div class="container">
 
@@ -71,10 +76,13 @@
           </thead>
           <tbody>
             <tr>
-              <td>Game 1</td>
+              <td><a href="page2_silverteam.html">Memory Game</a></td>
             </tr>
             <tr>
-              <td>Game 2</td>
+              <td><a href="page3_silverteam.html">Math Game</a></td>
+            </tr>
+            <tr>
+              <td><a href="page4_silverteam.html">Tic-Tac-Toe Game</a></td>
             </tr>
           </tbody>
         </table>      

@@ -16,37 +16,45 @@
     <script src="script/mathgame.js" defer></script>
   </head>
   <body>
-    <header>
+    <header class="nav-no-js">
       <div class="banner">
         <img alt="" src="images/Banner.png" />
       </div>
 
-      <nav class="navbar">
-        <ul class="nav-links">
-          <input type="checkbox" id="checkbox_toggle" />
-          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-          <div class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li class="services">
-              <a href="/">Brain Exercise</a>
-              <ul class="dropdown">
-                <li><a href="page2_silverteam.html">Game 1</a></li>
-                <li><a href="page3_silverteam.html">Game 2</a></li>
-                <li><a href="page4_silverteam.html">Game 3</a></li>
-              </ul>
-            </li>
-            <li class="services">
-              <a href="/">Card 2</a>
-              <ul class="dropdown">
-                <li><a href="/">Gallery 1 </a></li>
-                <li><a href="/">Gallery 2</a></li>
-              </ul>
-            </li>
-            <li><a href="/">Doc</a></li>
-            <li><a href="/">About</a></li>
-          </div>
+      <a href="#" class="nav-button">Menu</a>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="nav-submenu">
+            <a href="#">Brain Exercise</a>
+            <ul>
+              <li><a href="page2_silverteam.html">Game 1</a></li>
+              <li><a href="page3_silverteam.html">Game 2</a></li>
+              <li><a href="page4_silverteam.html">Game 3</a></li>
+            </ul>
+          </li>
+          <li class="nav-submenu">
+            <a href="#">Card 2</a>
+            <ul class="dropdown">
+              <li><a href="/">Gallery 1 </a></li>
+              <li><a href="/">Gallery 2</a></li>
+            </ul>
+          </li>
+          <li class="nav-submenu">
+            <a href="#">Card 3</a>
+            <ul>
+              <li><a href="#">Christmas</a></li>
+              <li><a href="#">New Year</a></li>
+              <li><a href="#">Easter</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Doc</a></li>
+          <li><a href="#">About</a></li>
         </ul>
       </nav>
+
+      <a href="#" class="nav-close">Close Menu</a>
     </header>
 
     <section class="gameBoard">
@@ -59,11 +67,10 @@
               options. You must choose the correct answer to keep playing.
             </li>
             <li>
-              when the game starts you will have 60 seconds to answer as many questions as possible.
+              when the game starts you will have 60 seconds to answer as many
+              questions as possible.
             </li>
-            <li>
-              The game ends when the time is up. Enjoy!!
-            </li>
+            <li>The game ends when the time is up. Enjoy!!</li>
           </ol>
         </div>
 
