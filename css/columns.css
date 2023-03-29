@@ -32,6 +32,7 @@
 	font-weight: 400;
 	line-height: 20px;
 	color: #666;
+	text-align: justify;
 }
 
 .container table {
@@ -129,3 +130,7 @@
 	margin: 0px;
 	padding: 0px;
 }
+
+.container a { 
+	color: #002E2B;
+ }
