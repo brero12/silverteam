@@ -131,6 +131,13 @@
 	padding: 0px;
 }
 
+.puzzle{
+	max-width: 662px;
+	margin: 0px;
+	padding: 0px;
+	border: solid 2px purple;
+}
+
 .container a { 
 	color: #002E2B;
  }
