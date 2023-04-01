@@ -1,0 +1,10 @@
+#enviorement {
+	display: block;
+	margin: 0 auto;
+	width: 600px;
+	height: 600px;
+}
+
+#background {
+	opacity: 0.3;
+}

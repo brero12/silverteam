@@ -1,105 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Silver Team Project</title>
 
-    <link rel="stylesheet" href="css/columns.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silver Team Project</title>
 
-    <link rel="stylesheet" href="css/tictactoe.css" />
-    <script src="script/tictactoe.js"></script>
-  </head>
-  <body>
-    <header>
-      <div class="banner">
-        <img alt="" src="images/Banner.png" />
+  <link rel="stylesheet" href="css/columns.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+
+  <link rel="stylesheet" href="css/tictactoe.css" />
+  <script src="script/tictactoe.js"></script>
+</head>
+
+<body>
+  <header class="nav-no-js">
+    <div class="banner">
+      <img alt="" src="images/Banner.png">
+    </div>
+
+    <a href="#" class="nav-button">Menu</a>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-submenu">
+          <a href="#">Brain Exercise</a>
+          <ul>
+            <li><a href="page2_silverteam.html">Game 1</a></li>
+            <li><a href="page3_silverteam.html">Game 2</a></li>
+            <li><a href="page4_silverteam.html">Game 3</a></li>
+          </ul>
+        </li>
+        <li class="nav-submenu">
+          <a href="#">People & Canvas</a>
+          <ul class="dropdown">
+            <li><a href="page5_silverteam.html">Art Gallery</a></li>
+            <li><a href="page6_silverteam.html">Puzzle Game</a></li>
+          </ul>
+        </li>
+        <li class="nav-submenu">
+          <a href="#">Card 3</a>
+          <ul>
+            <li><a href="#">Christmas</a></li>
+            <li><a href="#">New Year</a></li>
+            <li><a href="#">Easter</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Doc</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+
+    <a href="#" class="nav-close">Close Menu</a>
+  </header>
+
+  <section class="gameBoard">
+    <div class="container">
+      <div class="transparentcards">
+        <h3>Rules for TIC-TAC-TOE</h3>
+        <ol>
+          <li>The game is played on a grid that's 3 squares by 3 squares.</li>
+          <li>
+            You are X, your friend (or the computer in this case) is O.
+            Players take turns putting their marks in empty squares.
+          </li>
+          <li>
+            The first player to get 3 of her marks in a row (up, down, across,
+            or diagonally) is the winner.
+          </li>
+          <li>
+            When all 9 squares are full, the game is over. If no player has 3
+            marks in a row, the game ends in a tie.
+          </li>
+        </ol>
       </div>
 
-      <nav class="navbar">
-        <ul class="nav-links">
-          <input type="checkbox" id="checkbox_toggle" />
-          <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-          <div class="menu">
-            <li><a href="index.html">Home</a></li>
-            <li class="services">
-              <a href="/">Brain Exercise</a>
-              <ul class="dropdown">
-                <li><a href="page2_silverteam.html">Game 1</a></li>
-                <li><a href="page3_silverteam.html">Game 2</a></li>
-                <li><a href="page4_silverteam.html">Game 3</a></li>
-              </ul>
-            </li>
-            <li class="services">
-              <a href="/">Card 2</a>
-              <ul class="dropdown">
-                <li><a href="/">Gallery 1 </a></li>
-                <li><a href="/">Gallery 2</a></li>
-              </ul>
-            </li>
-            <li><a href="/">Doc</a></li>
-            <li><a href="/">About</a></li>
-          </div>
-        </ul>
-      </nav>
-    </header>
+      <div class="transparentcards">
+        <!-- Space to show player turn -->
+        <p id="print">Click a box to start</p>
 
-    <section class="gameBoard">
-      <div class="container">
-        <div class="transparentcards">
-          <h3>Rules for TIC-TAC-TOE</h3>
-          <ol>
-            <li>The game is played on a grid that's 3 squares by 3 squares.</li>
-            <li>
-              You are X, your friend (or the computer in this case) is O.
-              Players take turns putting their marks in empty squares.
-            </li>
-            <li>
-              The first player to get 3 of her marks in a row (up, down, across,
-              or diagonally) is the winner.
-            </li>
-            <li>
-              When all 9 squares are full, the game is over. If no player has 3
-              marks in a row, the game ends in a tie.
-            </li>
-          </ol>
-        </div>
+        <!-- 3*3 grid of Boxes -->
+        <input type="text" id="box1" onclick="box1Event(); validateWinner();" readonly />
+        <input type="text" id="box2" onclick="box2Event(); validateWinner();" readonly />
+        <input type="text" id="box3" onclick="box3Event(); validateWinner();" readonly />
+        <br />
+        <input type="text" id="box4" onclick="box4Event(); validateWinner();" readonly />
+        <input type="text" id="box5" onclick="box5Event(); validateWinner();" readonly />
+        <input type="text" id="box6" onclick="box6Event(); validateWinner();" readonly />
+        <br />
+        <input type="text" id="box7" onclick="box7Event(); validateWinner();" readonly />
+        <input type="text" id="box8" onclick="box8Event();validateWinner();" readonly />
+        <input type="text" id="box9" onclick="box9Event();validateWinner();" readonly />
 
-        <div class="transparentcards">
-          <!-- Space to show player turn -->
-          <p id="print">Click a box to start</p>
-
-          <!-- 3*3 grid of Boxes -->
-          <input type="text" id="box1" onclick="box1Event(); validateWinner();" readonly />
-          <input type="text" id="box2" onclick="box2Event(); validateWinner();" readonly />
-          <input type="text" id="box3" onclick="box3Event(); validateWinner();" readonly />
-          <br />
-          <input type="text" id="box4" onclick="box4Event(); validateWinner();" readonly />
-          <input type="text" id="box5" onclick="box5Event(); validateWinner();" readonly />
-          <input type="text" id="box6" onclick="box6Event(); validateWinner();" readonly />
-          <br />
-          <input type="text" id="box7" onclick="box7Event(); validateWinner();" readonly />
-          <input type="text" id="box8" onclick="box8Event();validateWinner();" readonly />
-          <input type="text" id="box9" onclick="box9Event();validateWinner();" readonly />
-
-          <!-- Grid end here  -->
-          <br /><br /><br />
-          <!-- Button to reset game -->
-          <button id="resetButton" onclick="resetGameBoard()">RESET</button>
-        </div>
+        <!-- Grid end here  -->
+        <br /><br /><br />
+        <!-- Button to reset game -->
+        <button id="resetButton" onclick="resetGameBoard()">RESET</button>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <div class="footerWrap">
-        <div class="footerContent">
-          <p>&copy; CSIS1280 - 071 Bryan R., Juan M., Thanh N.</p>
-        </div>
+  <footer>
+    <div class="footerWrap">
+      <div class="footerContent">
+        <p>&copy; CSIS1280 - 071 Bryan R., Juan M., Thanh N.</p>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>

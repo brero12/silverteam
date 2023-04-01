@@ -1,0 +1,31 @@
+.galleryContent h2, p{
+    font-size: x-small; 
+    text-align: justify;
+}
+
+.galleryContent{
+    text-align: center;
+    margin: auto;
+    width: 80%;
+}
+
+.Branch{
+    width:539px;
+    height:100px;
+}
+
+.imgContent{
+    height:200px
+}
+
+@media (max-width:640px) {
+    .galleryContent h2, p{
+        font-size: x-small; 
+        text-align: justify;
+    }
+
+    .imgContent{
+        height:120px
+    }
+    
+}
