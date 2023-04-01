@@ -1,16 +1,16 @@
 /*Programacion de JavaScript*/
 
-var piezas = document.getElementsByClassName('movil');
+var parts = document.getElementsByClassName('mobile');
 
 var tamWidh = [134,192,134,163,134,163,134,192,134];
 var tamHeight = [163,134,163,134,192,134,163,134,163];
 
-for(var i=0;i<piezas.length;i++){
-	piezas[i].setAttribute("width", tamWidh[i]);
-	piezas[i].setAttribute("height",tamHeight[i]);
-	piezas[i].setAttribute("x", Math.floor((Math.random() * 10) + 1));
-	piezas[i].setAttribute("y", Math.floor((Math.random() * 409) + 1));
-	piezas[i].setAttribute("onmousedown","seleccionarElemento(evt)");
+for(var i=0;i<parts.length;i++){
+	parts[i].setAttribute("width", tamWidh[i]);
+	parts[i].setAttribute("height",tamHeight[i]);
+	parts[i].setAttribute("x", Math.floor((Math.random() * 10) + 1));
+	parts[i].setAttribute("y", Math.floor((Math.random() * 209) + 1));
+	parts[i].setAttribute("onmousedown","seleccionarElemento(evt)");
 }
 
 var elementSelect = 0;  
@@ -67,7 +67,7 @@ var origX = [200,304,466,185,333,452,200,304,466];
 var origY = [85,100,85,233,204,233,351,366,351];
 
 function iman(){
-	for(var i=0;i<piezas.length;i++){
+	for(var i=0;i<parts.length;i++){
 		if (Math.abs(currentPosx-origX[i])<15 && Math.abs(currentPosy-origY[i])<15) {
 			elementSelect.setAttribute("x",origX[i]);
 			elementSelect.setAttribute("y",origY[i]);
@@ -80,7 +80,7 @@ var win = document.getElementById("win");
 function testing() {
 	var bien_ubicada = 0;
 	var padres = document.getElementsByClassName('padre');
-	for(var i=0;i<piezas.length;i++){
+	for(var i=0;i<parts.length;i++){
 		var posx = parseFloat(padres[i].firstChild.getAttribute("x"));    
 		var posy = parseFloat(padres[i].firstChild.getAttribute("y"));
 		ide = padres[i].getAttribute("id");
@@ -93,3 +93,4 @@ function testing() {
 		console.log("Congratulations, You have made it");
 	}
 }
+git 

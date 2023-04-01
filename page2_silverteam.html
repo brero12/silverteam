@@ -1,102 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Silver Team Project</title>
 
-    <link rel="stylesheet" href="css/columns.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silver Team Project</title>
 
-    <link rel="stylesheet" href="css/memorygame.css" />
+  <link rel="stylesheet" href="css/columns.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
 
-    <script src="script/memorygame.js"></script>
-  </head>
-  <body>
-    <header class="nav-no-js">
-      <div class="banner">
-        <img alt="" src="images/Banner.png" />
+  <link rel="stylesheet" href="css/memorygame.css" />
+
+  <script src="script/memorygame.js"></script>
+</head>
+
+<body>
+  <header class="nav-no-js">
+    <div class="banner">
+      <img alt="" src="images/Banner.png">
+    </div>
+
+    <a href="#" class="nav-button">Menu</a>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-submenu">
+          <a href="#">Brain Exercise</a>
+          <ul>
+            <li><a href="page2_silverteam.html">Game 1</a></li>
+            <li><a href="page3_silverteam.html">Game 2</a></li>
+            <li><a href="page4_silverteam.html">Game 3</a></li>
+          </ul>
+        </li>
+        <li class="nav-submenu">
+          <a href="#">People & Canvas</a>
+          <ul class="dropdown">
+            <li><a href="page5_silverteam.html">Art Gallery</a></li>
+            <li><a href="page6_silverteam.html">Puzzle Game</a></li>
+          </ul>
+        </li>
+        <li class="nav-submenu">
+          <a href="#">Card 3</a>
+          <ul>
+            <li><a href="#">Christmas</a></li>
+            <li><a href="#">New Year</a></li>
+            <li><a href="#">Easter</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Doc</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+
+    <a href="#" class="nav-close">Close Menu</a>
+  </header>
+
+  <section class="gameBoard">
+    <div class="container">
+      <div class="transparentcards">
+        <h3>Rules for Memory Game</h3>
+        <ol>
+          <li>
+            The scope consists of n different image card types with pairs of
+            cards that have the same image.
+          </li>
+          <li>
+            Each turn, you flip over two cards (one at a time, so you can see
+            the first one before picking the second).
+          </li>
+          <li>
+            If the two cards match, then they are keep shown on the screen,
+            otherwise, they are returned to hide.
+          </li>
+          <li>
+            The game ends when all the cards are keep shown on the screen. in
+            that moment time will stop.
+          </li>
+        </ol>
       </div>
 
-      <a href="#" class="nav-button">Menu</a>
-
-      <nav class="nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="nav-submenu">
-            <a href="#">Brain Exercise</a>
-            <ul>
-              <li><a href="page2_silverteam.html">Game 1</a></li>
-              <li><a href="page3_silverteam.html">Game 2</a></li>
-              <li><a href="page4_silverteam.html">Game 3</a></li>
-            </ul>
-          </li>
-          <li class="nav-submenu">
-            <a href="#">People & Canvas</a>
-            <ul class="dropdown">
-              <li><a href="page5_silverteam.html">Art Gallery</a></li>
-              <li><a href="page6_silverteam.html">Puzzle Game</a></li>
-            </ul>
-          </li>
-          <li class="nav-submenu">
-            <a href="#">Card 3</a>
-            <ul>
-              <li><a href="#">Christmas</a></li>
-              <li><a href="#">New Year</a></li>
-              <li><a href="#">Easter</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Doc</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </nav>
-
-      <a href="#" class="nav-close">Close Menu</a>
-    </header>
-
-    <section class="gameBoard">
-      <div class="container">
-        <div class="transparentcards">
-          <h3>Rules for Memory Game</h3>
-          <ol>
-            <li>
-              The scope consists of n different image card types with pairs of
-              cards that have the same image.
-            </li>
-            <li>
-              Each turn, you flip over two cards (one at a time, so you can see
-              the first one before picking the second).
-            </li>
-            <li>
-              If the two cards match, then they are keep shown on the screen,
-              otherwise, they are returned to hide.
-            </li>
-            <li>
-              The game ends when all the cards are keep shown on the screen. in
-              that moment time will stop.
-            </li>
-          </ol>
-        </div>
-
-        <div class="transparentcards memorycard">
-          Time in game: <label id="minutes">00</label>:<label id="seconds"
-            >00</label
-          >
-          <button id="resetButton" onclick="resetGameBoard()">RESET</button>
-          <div id="gamecontainer"></div>
-        </div>
+      <div class="transparentcards memorycard">
+        Time in game: <label id="minutes">00</label>:<label id="seconds">00</label>
+        <button id="resetButton" onclick="resetGameBoard()">RESET</button>
+        <div id="gamecontainer"></div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <div class="footerWrap">
-        <div class="footerContent">
-          <p>&copy; CSIS1280 - 071 Bryan R., Juan M., Thanh N.</p>
-        </div>
+  <footer>
+    <div class="footerWrap">
+      <div class="footerContent">
+        <p>&copy; CSIS1280 - 071 Bryan R., Juan M., Thanh N.</p>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>

@@ -104,7 +104,7 @@
 .transparentcards {
 	display: block;
 	top: 0px;
-	max-width: 262px;
+	max-width: 282px;
 	background-color: transparent;
 	border-radius: 4px;
 	padding: 32px 24px;
@@ -126,6 +126,12 @@
 }
 
 .mathcard{
+	max-width: 462px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.gallerycard{
 	max-width: 462px;
 	margin: 0px;
 	padding: 0px;

@@ -1,110 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Silver Team Project</title>
 
-    <link rel="stylesheet" href="css/columns.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/footer.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silver Team Project</title>
 
-    <link rel="stylesheet" href="css/mathgame.css" />
+  <link rel="stylesheet" href="css/columns.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
 
-    <script src="script/mathgame.js" defer></script>
-  </head>
-  <body>
-    <header class="nav-no-js">
-      <div class="banner">
-        <img alt="" src="images/Banner.png" />
+  <link rel="stylesheet" href="css/mathgame.css" />
+
+  <script src="script/mathgame.js" defer></script>
+</head>
+
+<body>
+  <header class="nav-no-js">
+    <div class="banner">
+      <img alt="" src="images/Banner.png">
+    </div>
+
+    <a href="#" class="nav-button">Menu</a>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-submenu">
+          <a href="#">Brain Exercise</a>
+          <ul>
+            <li><a href="page2_silverteam.html">Game 1</a></li>
+            <li><a href="page3_silverteam.html">Game 2</a></li>
+            <li><a href="page4_silverteam.html">Game 3</a></li>
+          </ul>
+        </li>
+        <li class="nav-submenu">
+          <a href="#">People & Canvas</a>
+          <ul class="dropdown">
+            <li><a href="page5_silverteam.html">Art Gallery</a></li>
+            <li><a href="page6_silverteam.html">Puzzle Game</a></li>
+          </ul>
+        </li>
+        <li class="nav-submenu">
+          <a href="#">Card 3</a>
+          <ul>
+            <li><a href="#">Christmas</a></li>
+            <li><a href="#">New Year</a></li>
+            <li><a href="#">Easter</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Doc</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+
+    <a href="#" class="nav-close">Close Menu</a>
+  </header>
+
+  <section class="gameBoard">
+    <div class="container">
+      <div class="transparentcards">
+        <h3>Rules for Math Game</h3>
+        <ol>
+          <li>
+            The game consists of a math question with 4 different answer
+            options. You must choose the correct answer to keep playing.
+          </li>
+          <li>
+            when the game starts you will have 60 seconds to answer as many
+            questions as possible.
+          </li>
+          <li>The game ends when the time is up. Enjoy!!</li>
+        </ol>
       </div>
 
-      <a href="#" class="nav-button">Menu</a>
-
-      <nav class="nav">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li class="nav-submenu">
-            <a href="#">Brain Exercise</a>
-            <ul>
-              <li><a href="page2_silverteam.html">Game 1</a></li>
-              <li><a href="page3_silverteam.html">Game 2</a></li>
-              <li><a href="page4_silverteam.html">Game 3</a></li>
-            </ul>
-          </li>
-          <li class="nav-submenu">
-            <a href="#">People & Canvas</a>
-            <ul class="dropdown">
-              <li><a href="page5_silverteam.html">Art Gallery</a></li>
-              <li><a href="page6_silverteam.html">Puzzle Game</a></li>
-            </ul>
-          </li>
-          <li class="nav-submenu">
-            <a href="#">Card 3</a>
-            <ul>
-              <li><a href="#">Christmas</a></li>
-              <li><a href="#">New Year</a></li>
-              <li><a href="#">Easter</a></li>
-            </ul>
-          </li>
-          <li><a href="#">Doc</a></li>
-          <li><a href="#">About</a></li>
-        </ul>
-      </nav>
-
-      <a href="#" class="nav-close">Close Menu</a>
-    </header>
-
-    <section class="gameBoard">
-      <div class="container">
-        <div class="transparentcards">
-          <h3>Rules for Math Game</h3>
-          <ol>
-            <li>
-              The game consists of a math question with 4 different answer
-              options. You must choose the correct answer to keep playing.
-            </li>
-            <li>
-              when the game starts you will have 60 seconds to answer as many
-              questions as possible.
-            </li>
-            <li>The game ends when the time is up. Enjoy!!</li>
-          </ol>
-        </div>
-
-        <div class="transparentcards mathcard">
-          <div id="gamecontainer">
-            <div id="timeremaining">
-              Time remaining: <span id="timeremainingvalue"> 60</span>
-            </div>
-            <div id="correct">Correct!</div>
-            <div id="wrong">Try again!</div>
-            <div id="gameOver"></div>
-            <br /><br />
-            <div id="score">
-              score: <span id="scorevalue" style="font-weight: 900">0</span>
-            </div>
-            <div id="question"></div>
-            <div id="choices">
-              <div id="box1" class="box"></div>
-              <div id="box2" class="box"></div>
-              <div id="box3" class="box"></div>
-              <div id="box4" class="box"></div>
-            </div>
-            <div id="startreset">Start Game</div>
+      <div class="transparentcards mathcard">
+        <div id="gamecontainer">
+          <div id="timeremaining">
+            Time remaining: <span id="timeremainingvalue"> 60</span>
           </div>
+          <div id="correct">Correct!</div>
+          <div id="wrong">Try again!</div>
+          <div id="gameOver"></div>
+          <br /><br />
+          <div id="score">
+            score: <span id="scorevalue" style="font-weight: 900">0</span>
+          </div>
+          <div id="question"></div>
+          <div id="choices">
+            <div id="box1" class="box"></div>
+            <div id="box2" class="box"></div>
+            <div id="box3" class="box"></div>
+            <div id="box4" class="box"></div>
+          </div>
+          <div id="startreset">Start Game</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <footer>
-      <div class="footerWrap">
-        <div class="footerContent">
-          <p>&copy; CSIS1280 - 071 Bryan R., Juan M., Thanh N.</p>
-        </div>
+  <footer>
+    <div class="footerWrap">
+      <div class="footerContent">
+        <p>&copy; CSIS1280 - 071 Bryan R., Juan M., Thanh N.</p>
       </div>
-    </footer>
-  </body>
+    </div>
+  </footer>
+</body>
+
 </html>
