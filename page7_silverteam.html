@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="css/header.css" />
   <link rel="stylesheet" href="css/footer.css" />
   <link rel="stylesheet" href="css/guide.css">
+  <link rel="stylesheet" href="css/guidebvr.css">
 </head>
 
 <body>
@@ -42,8 +43,6 @@
           <a href="page7_silverteam.html">F-16 guide</a>
           <ul>
             <li><a href="#">BVR</a></li>
-            <li><a href="#">WVR</a></li>
-            <li><a href="#">Tactics</a></li>
           </ul>
         </li>
         <li><a href="#">Doc</a></li>
@@ -53,32 +52,139 @@
 
     <a href="#" class="nav-close">Close Menu</a>
   </header>
-  <!---->
-  <div style="text-align: center; width: 70%; margin: 0 auto;">
-    <h1 style="color: white;">A Simplified F-16 guide</h1>
-    <h3 style="color: white;">What would you like to know?</h2>
+  <h1 style="text-align: center; color: white;">BVR</h1>
 
-    <div class="container">
-        <div class="col">
-            <h2>BVR</h2>
-            <p>Stands for "Beyond visual range", this section will cover knowledges about the usage of active radar guided missiles such as AIM-120B/C AMRAAM missiles</p>
-            <img src="images/guide/maxresdefault (1).jpg" alt="" width="500px">
+  <section>
+    <div id="intro" class="bvrIntro">
+      <div class="img-container">
+        <img src="images/guide/maxresdefault (1).jpg" alt="" width="100%" style="filter: brightness(20%)">
+        <div class="intro-text">
+          <p>Beyond Visual Range missiles</p>
         </div>
-        <div class="col">
-            <h2>WVR</h2>
-            <p>Stands for "Within visual range", this section will covers the usage of infrared guided missiles such as AIM-9 Sidewinders and guns used in close range fights</p>
-            <img src="images/guide/maxresdefault.png" alt="" width="500px">
-        </div>
-        <div class="col">
-            <h2>Dogfights and BVR tactics</h2>
-            <p>This section will demonstrate the tactics in 2 air-to-air fight concepts with 2 weapons mentioned above.</p>
-            <br>
-            <img src="images/guide/i8oyw.jpg" alt="" width="500px" height="240px">
-        </div>
+      </div>
+        <h2>I. Introduction</h2>
+        <p>A BVR fight is one of the most important aspect when it comes to air-to-air combat engagements as you have a missile that can reach a target further than you can see, that may give yourself a chance to launch a supprise attack on enemy pilots and reducing risks of being detected.</p>
+        <h3>&#x2022; An overview of Beyond Visual Range air-to-air missiles.</h3>
+        <h4>1. What are BVR missiles?</h4>
+        <p>an air-to-air missile (BVRAAM) that is capable of engaging at ranges of 20 nautical miles (37 km) or beyond. This range has been achieved using dual pulse rocket motors or booster rocket motor and ramjet sustainer motor.
+ In addition to the range capability, the missile must also be capable of tracking its target at this range or of acquiring the target in flight. Systems in which a mid-course correction is transmitted to the missile have been used (Wikipedia).</p>
+
+        <h4>2. The development of BVR missiles</h4>
+        <p><b>- Semi-active radar homing missiles: </b>Early air-to-air missiles used semi-active radar homing guidance, that is the missile used the radiation produced by the launching aircraft to guide it to the target. The latest generation of BVR missiles use a combination of semi-active and active radar. 
+            An expample of this is AIM-7 Sparrow from USAF and R-27ER from VVS (Russian Air force). We call it "Fox 1" according to the NATO brevity code.</p>
+        <img src="https://qph.cf2.quoracdn.net/main-qimg-9203a5bd280fb72e0ba77414c8c48113" alt="" width="35%"> 
+        <figcaption><i>Exhibit 1.0: Semi-active radar missile uses the information from the launch aircraft to get to its target.</i></figcaption>
+        
+        <p><b>- Active radar homing missiles: </b> is a missile guidance method in which a missile contains a radar transceiver (in contrast to semi-active radar homing, which uses only a receiver) 
+            and the electronics necessary for it to find and track its target autonomously, launch aircrafts can break away after firing the missile. An instance of this is AIM-120 AMRAAM from USAF and R-77 (AA-12 Adder) from VVS (Russian Air force). We call it "Fox 3" according to the NATO brevity code.
+        </p>
+        <img src="https://qph.cf2.quoracdn.net/main-qimg-9657120f2f8149c8f583d486cc58ffc2" alt="" width="35%">
+        <figcaption><i>Exhibit 1.1: Active radar missiles uses its own radar to detect and reach its target.</i></figcaption>
+
+
     </div>
+    <div id="tuto" class="bvrTutorial">
+      <h2>II. Operating AIM-120 in an F-16</h2>
+        <h3>&#x2022; About AIM-120 air-to-air missiles</h3>
+            <p>In our F-16C module, one of the most effective and commonly used BVR missile is an AIM-120 AMRAAM, an American beyond-visual-range air-to-air missile capable of all-weather day-and-night operations.
+                It is also a fire and forget weapon as it capable of tracking the target by itself, giving the pilot more opportunities to defend against incoming missile threats. </p>
+    
+         <h4>1. AIM-120 variants</h4>
+            <p>There are 2 variants of the AMRAAM featured in DCS, can be used depends on the players tactics, these are:</p>
+            <p><b>- AIM-120 Bravo (AIM-120B): </b>a variant which has bigger fins and provide better maneuverability, suitable for medium range and maneuverable targets.</p>
+          <img src="http://www.military-today.com/missiles/aim120_amraam.jpg" alt="" width="40%">
+            <figcaption><i>AIM-120B with its noticable sharp fins</i></figcaption>
+            <br>
+            <p><b>- AIM-120 Charlie (AIM-120C): </b>a variant which has has a smaller fins, better engines which can operate against long range targets.</p>
+                <img src="https://i.ytimg.com/vi/GXrdZHXuwts/maxresdefault.jpg" alt="" width="40%">
+                <figcaption><i>AIM-120B with square fins and bigger fuel storage.</i></figcaption>
+    
+        <h3>&#x2022; Operating AIM-120 in your F-16</h4>
+            <p>It's time to step on our F-16 and shoot the enemy out of our skies, operating the weapon system in an F-16 is either long and confusing, so i will simplyfy it as much as i can. Let's get right into it.</p>
+          <h4>1. Turn on all the related functions related to weapons and aviation systems: </h4>
+          <h4>a. Required system that has to be enabled in an air-to-air engagements.</h4>
+            <p><b>- turn on your RWR (radar warning receiver) and countermeasures: </b>this system issues a warning when a radar signal that might be a threat is detected, such as the enemy's aircraft radar lock. And preventing enemy's missiles to track with countermearsures.</p>
+            <div class="container">
+            <div>
+              <img src="images/guide/tutorial-setup-1.png" alt="" width="90%">
+            </div>
+            <div>
+              <img src="images/guide/tutorial-setup-2.png" alt="" width="90%">
+            </div>
+            <figcaption><i>Turn on the RWR by pressing "Power" button in "Thread Warning AUX" section, shown on the left image. After turning it all on, the countermearsures tab reveals 2 options for chaff and flares respectively, 
+              as well as the RWR showed up and display some contacts that has radar emission (right image). In this case, the "E3" symbol shown on the RWR is a friendly AWACS.</i></figcaption>
+          </div>
+          <br>
 
-  </div>
+          <h4>b. Entering air-to-air mode </h4>
+          <p><b>- Turn on the FCR (fire control radar) by switching the FCR switch from "Off" to "FCR": </b>This will allow you to have access to the radar lock system to lock the enemy. This radar system can operate between 5-160 nautical miles.</p>
+          <div class="container">
+            <div>
+              <img src="images/guide/tutorial-setup-3.png" alt="" width="90%">
+            </div>
+            <div>
+              <img src="images/guide/tutorial-setup-4.png" alt="" width="90%">
+            </div>
+            <figcaption><i>After turning on the switch shown images, the left multifunctional display (MFD) will display the radar all of its nearby contacts. In this case, there is a bogey coming in hot (shown as the yellow circle) and Raw Contacts (shown as the blue circle).</i></figcaption>
+            </div>
+            <br>
+            <p><b>- Enable the master arms by switching master arm switch to "MASTER ARM" and selecting air-to-air mode by pressing the air-to-air button on the Integrated Control Panel (ICP): </b> after this step, the aircraft will have access to all of the weapons available on its system and ready to fire.</p>
+            <div class="container">
+              <div>
+                <img src="images/guide/tutorial-setup-5.png" alt="" width="90%">
+              </div>
+              <div>
+                <img src="images/guide/tutorial-setup-6.png" alt="" width="90%">
+              </div>
+              <figcaption><i>after selecting the weapons as the first image. If you have done correctly, the heads up display (HUD) should display a large circle as shown.</i></figcaption>
+            </div>
+            <br>
+            <p style="text-align: center;"><b>**And that's it, You should be ready to fire and use any kind of weapons available in your aircraft at this point.**</b></p>
+            <br>
+            <p><b>- And lastly, select your AIM-120 in the right MFD, you can either choose between the B and C variant.</b></p>
+            <img src="images/guide/tutorial-setup-7.png" alt="" width="90%">
 
+            <h4>2. AIM-120 usage.</h4>
+            <p>There are many BVR shooting mode in this F-16 module. However, this tutorial will cover only 2 basic modes that can be used by a missiles: Using <b>radar lock</b> and <b>using boresight mode.</b></p>
+            <p><b>a. Radar locking mode: </b>This method uses the radar to lock and engage the targets from afar, ensures a low profile and avoid detection. It can be done by the following steps: </p>
+            <p><b>Step 1: Cycle and find the target via the left MFD: </b>you can either use radar cursor switches if you have a flightstick, or ; / . , as up, right, down, left respectively for the keyboard.</p>
+            <img src="images/guide/engagement-1.gif" alt="selectingTarget" width="70%">
+            <p><b>Step 2: Lock the target using the radar:</b> you can lock the target using target management switch up button on your flightstick or ctrl + arrow up on your keyboard.</p>
+            <img src="images/guide/engagement-2.gif" alt="lockingTarget" width="70%">
+            <p><b>Step 3: Approach the enemy and fire the missiles: </b> After locking the enemy, you should see a square box in your HUD, represents the location of the enemy, and a small circle. Approach the enemy until the circle gets bigger and release your missiles my holding right Alt + Home on keyboard:</p>
+            <img src="images/guide/engagement-3.gif" alt="missileRelease" width="70%">
+            <p><b>Step 4: Wait for the missile to active and break away: </b> After launching the missile, check your HUD to see the letter A with a number next to it, represents the estimatied time for it to get active (first image). After the countdown is over, and letter A replaced by the T, it means that the missile is now active (second image) and you can break away after that.</p>
+            <div class="container">
+              <div>
+                <img src="images/guide/engagement-4.png" alt="" width="90%">
+              </div>
+              <div>
+                <img src="images/guide/engagement-5.png" alt="" width="90%">
+              </div>
+            </div>
+
+            <p>After you break away, hope for the best and voila! the target is down</p>
+            <img src="images/guide/engagement-6.png" alt="" width="70%">
+
+            <p><b>b. Boresight mode: </b>This method uses the boresight to track its target without a radar lock, the pilot has to keep the target in a circle for the missile to track the target, suitable for medium ranged engangement. AIM-120C is preferred for this mode. </p>
+            <p><b>Step 1: Select boresight mode from the SMS page, right MFD: </b>After selecting it, the HUD should have a big circle as the first time we select air-to-air mode.</p>
+            <img src="images/guide/engagement-7.png" alt="" width="70%">
+
+            <p><b>Step 2: find the target until you see it visually: </b>you can either use the FCR to search for it, but locking it is not reccommend. Once you see the target visually, turn your radar to Silence.</p>
+            <img src="images/guide/engagement-8.png" alt="" width="70%">
+            
+            <p><b>Step 4: Keep the target inside the circle and fire your missile: </b> The missile is now in proper range and it will likely hit the target if there are no countermearsures applied</p>
+            <img src="images/guide/engagement-9.gif" alt="" width="70%">
+            <figcaption>Congratulations, you splashed the target.</figcaption>
+            <hr>
+            <h3>These are all the basis of BVR engagements, I hope you enjoy this simple tutorial.</h3>
+  </section>
+  <footer>
+    <div class="footerWrap">
+      <div class="footerContent">
+        <p>&copy; CSIS1280 - 071 Bryan R., Juan M., Thanh N.</p>
+      </div>
+    </div>
   </footer>
 
 </body>
