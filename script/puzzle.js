@@ -1,96 +1,84 @@
-/*Programacion de JavaScript*/
+var timerFunction;
 
-var parts = document.getElementsByClassName('mobile');
+var imagePuzzle = {
+    stepCount: 0,
+    startTime: new Date().getTime(),
+    startGame: function (images, gridSize) {
+        this.setImage(images, gridSize);
+        helper.doc('playPanel').style.display = 'block';
+        helper.shuffle('sortable');
+        this.stepCount = 0;
+        this.startTime = new Date().getTime();
+        this.tick();
+    },
+    tick: function () {
+        var now = new Date().getTime();
+        var elapsedTime = parseInt((now - imagePuzzle.startTime) / 1000, 10);
+        helper.doc('timerPanel').textContent = elapsedTime;
+        timerFunction = setTimeout(imagePuzzle.tick, 1000);
+    },
+    setImage: function (images, gridSize = 4) {
+        var percentage = 100 / (gridSize - 1);
+        var image = images[Math.floor(Math.random() * images.length)];
+		if (image.title != "")
+		{
+			helper.doc('imgTitle').innerHTML = image.title;
+		}        
+        helper.doc('actualImage').setAttribute('src', image.src);
+        helper.doc('sortable').innerHTML = '';
+        for (var i = 0; i < gridSize * gridSize; i++) {
+            var xpos = (percentage * (i % gridSize)) + '%';
+            var ypos = (percentage * Math.floor(i / gridSize)) + '%';
 
-var tamWidh = [134,192,134,163,134,163,134,192,134];
-var tamHeight = [163,134,163,134,192,134,163,134,163];
+            let li = document.createElement('li');
+            li.id = i;
+            li.setAttribute('data-value', i);
+            li.style.backgroundImage = 'url(' + image.src + ')';
+            li.style.backgroundSize = (gridSize * 100) + '%';
+            li.style.backgroundPosition = xpos + ' ' + ypos;
+            li.style.width = 280 / gridSize + 'px';
+            li.style.height = 280 / gridSize + 'px';
 
-for(var i=0;i<parts.length;i++){
-	parts[i].setAttribute("width", tamWidh[i]);
-	parts[i].setAttribute("height",tamHeight[i]);
-	parts[i].setAttribute("x", Math.floor((Math.random() * 10) + 1));
-	parts[i].setAttribute("y", Math.floor((Math.random() * 209) + 1));
-	parts[i].setAttribute("onmousedown","seleccionarElemento(evt)");
+            li.setAttribute('draggable', 'true');
+            li.ondragstart = (event) => event.dataTransfer.setData('data', event.target.id);
+            li.ondragover = (event) => event.preventDefault();
+            li.ondrop = (event) => {
+                let origin = helper.doc(event.dataTransfer.getData('data'));
+                let dest = helper.doc(event.target.id);
+                let p = dest.parentNode;
+
+                if (origin && dest && p) {
+                    let temp = dest.nextSibling;
+                    p.insertBefore(dest, origin);
+                    p.insertBefore(origin, temp);
+
+                    let vals = Array.from(helper.doc('sortable').children).map(x => x.id);
+                    var now = new Date().getTime();
+                    helper.doc('stepCount').textContent = ++imagePuzzle.stepCount;
+                    document.querySelector('.timeCount').textContent = (parseInt((now - imagePuzzle.startTime) / 1000, 10));
+
+                    if (isSorted(vals)) {
+                        helper.doc('actualImageBox').innerHTML = helper.doc('gameOver').innerHTML;
+                        helper.doc('stepCount').textContent = imagePuzzle.stepCount;
+                    }
+                }
+            };
+            li.setAttribute('dragstart', 'true');
+            helper.doc('sortable').appendChild(li);
+        }
+        helper.shuffle('sortable');
+    }
+};
+
+isSorted = (arr) => arr.every((elem, index) => { return elem == index; });
+
+var helper = {
+    doc: (id) => document.getElementById(id) || document.createElement("div"),
+
+    shuffle: (id) => {
+        var ul = document.getElementById(id);
+        for (var i = ul.children.length; i >= 0; i--) {
+            ul.appendChild(ul.children[Math.random() * i | 0]);
+        }
+    }
 }
-
-var elementSelect = 0;  
-var currentX = 0;
-var currentY = 0;
-var currentPosX = 0;
-var currentPosY = 0;
-
-function seleccionarElemento(evt) {
-	elementSelect = reordenar(evt);
-	currentX = evt.clientX;        
-	currentY = evt.clientY;
-	currentPosx = parseFloat(elementSelect.getAttribute("x"));     
-	currentPosy = parseFloat(elementSelect.getAttribute("y"));
-	elementSelect.setAttribute("onmousemove","moverElemento(evt)");
-}
-
-function moverElemento(evt){
-	var dx = evt.clientX - currentX;
-	var dy = evt.clientY - currentY;
-	currentPosx = currentPosx + dx;
-	currentPosy = currentPosy + dy;
-	elementSelect.setAttribute("x",currentPosx);
-	elementSelect.setAttribute("y",currentPosy);
-	currentX = evt.clientX;        
-	currentY = evt.clientY;
-	elementSelect.setAttribute("onmouseout","deseleccionarElemento(evt)");
-	elementSelect.setAttribute("onmouseup","deseleccionarElemento(evt)");
-	iman();
-}
-
-function deseleccionarElemento(evt){
-	testing();
-	if(elementSelect != 0){			
-		elementSelect.removeAttribute("onmousemove");
-		elementSelect.removeAttribute("onmouseout");
-		elementSelect.removeAttribute("onmouseup");
-		elementSelect = 0;
-	}
-}
-
-var entorno = document.getElementById('enviorement');
-
-function reordenar(evt){
-	var padre = evt.target.parentNode;
-	var clone = padre.cloneNode(true);
-	var id = padre.getAttribute("id");
-	entorno.removeChild(document.getElementById(id));
-	entorno.appendChild(clone);
-	return entorno.lastChild.firstChild;
-}
-
-var origX = [200,304,466,185,333,452,200,304,466];   
-var origY = [85,100,85,233,204,233,351,366,351];
-
-function iman(){
-	for(var i=0;i<parts.length;i++){
-		if (Math.abs(currentPosx-origX[i])<15 && Math.abs(currentPosy-origY[i])<15) {
-			elementSelect.setAttribute("x",origX[i]);
-			elementSelect.setAttribute("y",origY[i]);
-		}
-	}
-}
-			
-var win = document.getElementById("win");
-
-function testing() {
-	var bien_ubicada = 0;
-	var padres = document.getElementsByClassName('padre');
-	for(var i=0;i<parts.length;i++){
-		var posx = parseFloat(padres[i].firstChild.getAttribute("x"));    
-		var posy = parseFloat(padres[i].firstChild.getAttribute("y"));
-		ide = padres[i].getAttribute("id");
-		if(origX[ide] == posx && origY[ide] == posy){
-			bien_ubicada = bien_ubicada + 1;
-		}
-	}
-	if(bien_ubicada == 9){
-		win.play();
-		console.log("Congratulations, You have made it");
-	}
-}
-git 

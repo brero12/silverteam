@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Silver Team Project</title>
+
+  <link rel="stylesheet" href="css/columns.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/quiz.css">
+
+  <style>
+
+  </style>
+  <script src="script/quiz.js"></script>
+</head>
+
+<body>
+  <header class="nav-no-js">
+    <div class="banner"></div>
+
+    <a href="#" class="nav-button">Menu</a>
+
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-submenu">
+          <a href="#">Brain Exercise</a>
+          <ul>
+            <li><a href="page2_silverteam.html">Game 1</a></li>
+            <li><a href="page3_silverteam.html">Game 2</a></li>
+            <li><a href="page4_silverteam.html">Game 3</a></li>
+          </ul>
+        </li>
+        <li class="nav-submenu">
+          <a href="#">People & Canvas</a>
+          <ul class="dropdown">
+            <li><a href="page5_silverteam.html">Art Gallery</a></li>
+            <li><a href="page6_silverteam.html">Puzzle Game</a></li>
+          </ul>
+        </li>
+        <li class="nav-submenu">
+          <a href="page7_silverteam.html">F-16 guide</a>
+          <ul>
+            <li><a href="page7_silverteam.html">BVR</a></li>
+            <li><a href="page8_silverteam.html">Quiz</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Doc</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+
+    <a href="#" class="nav-close">Close Menu</a>
+  </header>
+  <h1 style="text-align: center; color: white;">Quizzes about BVR</h1>
+
+  <section>
+    <h1 style="text-align: center;">This quiz will test your understanding about the concept of deploying BVR weapons.</h1>
+
+    <hr>
+    <p><b>Question 1: </b> BVR stands for: <p>
+        <input type="text" name="q1" id="question1">
+
+        <p id="answer1"></p>
+
+        <button id="q1Submit" onclick="q1Ans()">Submit</button>
+        <br>
+        <br>
+    <p><b>Question 2: </b>How many types of BVR missiles are there?</p>
+    <input type="radio" name="q2" value="a"> a, 2<br>
+    <input type="radio" name="q2" value="b"> b, 4<br>
+    <input type="radio" name="q2" value="c"> c, 1<br>
+    <input type="radio" name="q2" value="d"> d, 3<br>
+    <p id="answer2"></p>
+    <button id="q2Submit" onclick="q2Ans()">Submit</button>
+    <button id="q2Reset" onclick="resetQ2()">Reset</button>
+    <br>
+    <br>
+    <p><b>Question 3: </b>What is the working range of the FCR?</p>
+    <input type="radio" name="q3" value="a"> a, 90-1000 nm<br>
+    <input type="radio" name="q3" value="b"> b, 120-70nm<br>
+    <input type="radio" name="q3" value="c"> c, 10-160nm<br>
+    <input type="radio" name="q3" value="d"> d, 5-160nm<br>
+    <p id="answer3"></p>
+    <button id="q3Submit" onclick="q3Ans()">Submit</button>
+    <button id="q3Reset" onclick="resetQ3()">Reset</button>
+    <br>
+    <br>
+    <p><b>Question 4: </b> FCR stands for: <p>
+      <input type="text" name="q4" id="question4">
+
+      <p id="answer4"></p>
+
+      <button id="q4ubmit" onclick="q4Ans()">Submit</button>
+      <br>
+      <br>
+      <p><b>Question 5: </b> RWR stands for: <p>
+        <input type="text" name="q5" id="question5">
+        <p id="answer5"></p>
+        <button id="q5ubmit" onclick="q5Ans()">Submit</button>
+        <br>
+        <br>
+        <p><b>Question 6: </b>Which AIM-120 variants featured in DCS?</p>
+        <input type="checkbox" id="q6a" name="question6">
+        <label for="q6a">AIM-120A</label> <br>
+        <input type="checkbox" id="q6b" name="question6">
+        <label for="q6b">AIM-120B</label> <br>
+        <input type="checkbox" id="q6c" name="question6">
+        <label for="q6c">AIM-120C</label> <br>
+        <input type="checkbox" id="q6d" name="question6"    >
+        <label for="q6d">AIM-120D</label> <br>
+        <p id="answer6"></p>
+        <button id="q6Submit" onclick="q6Ans()">Submit</button>
+        <button id="q6Reset" onclick="resetQ6()">Reset</button>
+        <br>
+        <br>
+        <p><b>Question 7: </b> Which system should be turned on in order to have access and fire your weapons against enemy aircrafts? </p>
+        <input type="checkbox" id="q7a" name="question7">
+        <label for="q7a">FCR (fire control radar)</label> <br>
+        <input type="checkbox" id="q7b" name="question7">
+        <label for="q7b">FCS (Flight Control System)</label> <br>
+        <input type="checkbox" id="q7c" name="question7">
+        <label for="q7c">Master Arm</label> <br>
+        <input type="checkbox" id="q7d" name="question7">
+        <label for="q7d">A-G (air-to-ground) mode button</label> <br>
+        <input type="checkbox" id="q7e" name="question7">
+        <label for="q7e">A-A (air-to-air) mode button</label> <br>
+        <input type="checkbox" id="q7f" name="question7">
+        <label for="q7f">RWR (Radar warning receiver)</label> <br>
+        <p id="answer7"></p>
+        <button id="q7Submit" onclick="q7Ans()">Submit</button>
+        <button id="q7Reset" onclick="resetQ7()">Reset</button>
+        <hr>
+        <h3>If you answered all of the quiz correctly, congratulations, time to blow some enemy up, good luck!</h3>
+  </section>
+  <footer>
+    <div class="footerWrap">
+      <div class="footerContent">
+        <p>&copy; CSIS1280 - 071 Bryan R., Juan M., Thanh N.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+<script>
+</script>
+</html>

@@ -1,11 +1,24 @@
 .banner {
-  width: 100%;
+  width: 80%;
+  background-image: url("../images/Banner.png");
+  background-repeat: no-repeat; 
+  margin: auto;
 }
 
-.banner img {
-  height: 100%;
-  width: 80%;
-  padding-left: 10%;
+@media (min-width:641px)
+{
+  .banner {
+    background-size: 100% 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width:640px)
+{
+  .banner {
+    background-size: 250px 100px;
+    height: 100px;
+  }
 }
 
 /***** Layout Menu *****/

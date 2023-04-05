@@ -1,0 +1,31 @@
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  #q2Reset, #q3Reset, #q6Reset, #q7Reset {
+      display: none;
+  }
+
+  section {
+    background-color: white; 
+    width: 70%; 
+    margin: 0 auto; 
+    padding: 20px;
+  }
+  input[type=checkbox] {
+    border: none;
+  }
