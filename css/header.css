@@ -1,27 +1,27 @@
 .banner {
   width: 80%;
   background-image: url("../images/Banner.png");
-  background-repeat: no-repeat; 
+  background-repeat: no-repeat;
   margin: auto;
 }
 
-@media (min-width:641px)
-{
+@media (min-width:641px) {
   .banner {
     background-size: 100% 200px;
     height: 200px;
   }
 }
 
-@media (max-width:640px)
-{
+@media (max-width:640px) {
   .banner {
     background-size: 250px 100px;
     height: 100px;
   }
 }
 
-/***** Layout Menu *****/
+/** 
+* Menu 
+**/
 
 @font-face {
   font-family: icon-font;
@@ -29,20 +29,11 @@
   src: url(../fonts/icon-font.eot?#iefix) format('eot'), url(../fonts/icon-font.woff) format('woff'), url(../fonts/icon-font.ttf) format('truetype'), url(../fonts/icon-font.svg#icon-font) format('svg')
 }
 
-.icon-desktop:before,
-.icon-menu-close:before,
-.icon-menu:before,
-.icon-mobile:before,
-.icon-submenu-down:before,
-.icon-submenu-right:before,
-.icon-world:before,
+
 .nav .nav-submenu>a:after,
 .nav-button:before,
-.nav-close:before,
-.nav>ul>.nav-submenu>a:after {
+.nav-close:before {
   font-family: icon-font;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-style: normal;
   font-variant: normal;
   font-weight: 400;
@@ -97,12 +88,18 @@
   padding-top: 4.4rem;
   line-height: 2.4rem;
   background: #002E2B;
-  color: #ffffff; 
-  margin: auto;  
-  width: 75%; 
+  color: #ffffff;
+  margin: auto;
+  width: 75%;
 }
 
 .nav ul {
+  display: block;
+  position: relative;
+  zoom: 1;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
   border-radius: 0 0 6px 6px;
   background: #002E2B
 }
@@ -137,7 +134,9 @@
   border-radius: 6px;
   padding: 0 20px 1px;
   color: #ffffff;
-  text-decoration: none
+  text-decoration: none;
+  display: block;
+  position: relative
 }
 
 .nav .nav-submenu>a:after {
@@ -148,92 +147,65 @@
   content: "\E005"
 }
 
-@media only screen and (min-width:641px) {
+@media (min-width:641px) {
   body {
-      padding: 0 !important
+    padding: 0 !important
   }
 
   .nav-button {
-      display: none
+    display: none
   }
 
   .nav {
-      padding: 0 !important
+    padding: 0 !important;
+    display: block;
+    position: relative;
+    bottom: auto;
+    overflow: visible;
+    border-radius: 25%;
   }
 
   .nav>ul>li {
-      border-top: none
+    border-top: none;
+    display: inline-block
   }
 
   .nav li>ul {
-      box-shadow: 0 0 5px 0 rgba(0, 0, 0, .75)
-  }
-}
-
-/**** Core ***/
-
-.nav ul {
-  display: block;
-  position: relative;
-  zoom: 1;
-  list-style-type: none;
-  margin: 0;
-  padding: 0
-}
-
-.nav a,
-.nav a:active,
-.nav a:hover,
-.nav a:visited {
-  display: block;
-  position: relative
-}
-
-@media only screen and (min-width:641px) {
-  .nav {
-      display: block;
-      position: relative;
-      bottom: auto;
-      overflow: visible;     
-      border-radius: 25%;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .75)
   }
 
   .nav li {
-      position: relative;
-      white-space: nowrap
-  }
-
-  .nav>ul>li {
-      display: inline-block
+    position: relative;
+    white-space: nowrap
   }
 
   .nav ul {
-      display: block
+    display: block
   }
 
   .nav ul ul {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      z-index: 901
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 901
   }
 
-  .nav-no-js .nav li:hover>ul {
-      display: block
+  .nav-responsive-css .nav li:hover>ul {
+    display: block
   }
 }
 
-@media only screen and (max-width:640px) {
+@media (max-width:640px) {
 
-  .nav-no-js .nav-button:hover+.nav,
-  .nav-no-js .nav-button:hover+.nav+.nav-close,
-  .nav-no-js .nav:hover,
-  .nav-no-js .nav:hover+.nav-close {
-      display: block
+  .nav-responsive-css .nav-button:hover+.nav,
+  .nav-responsive-css .nav-button:hover+.nav+.nav-close,
+  .nav-responsive-css .nav:hover,
+  .nav-responsive-css .nav:hover+.nav-close {
+    display: block
   }
 
-  .nav{
+  .nav {
     display: none;
     position: fixed;
     top: 0;
