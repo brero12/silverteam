@@ -27,7 +27,7 @@
 	margin-bottom: 4px;
 }
 
-.small {
+.smalltext {
 	font-size: 14px;
 	font-weight: 400;
 	line-height: 20px;
@@ -46,7 +46,7 @@
 	text-align: center;
 }
 
-.go-corner {
+.corner {
 	float: right;
 	align-items: center;
 	justify-content: center;
@@ -60,7 +60,7 @@
 	border-radius: 0px 4px 0px 32px;
 }
 
-.go-arrow {
+.arrow {
 	margin-top: -4px;
 	margin-right: -4px;
 	color: white;
@@ -82,7 +82,7 @@
 	cursor: pointer;
 }
 
-.whitecard .go-corner {
+.whitecard .corner {
 	opacity: 0.7;
 }
 
@@ -96,7 +96,7 @@
 	color: #002E2B;
 }
 
-.whitecard:hover .go-corner {
+.whitecard:hover .corner {
 	transition: opactiy 0.3s linear;
 	opacity: 1;
 }
@@ -137,13 +137,8 @@
 	padding: 0px;
 }
 
-.puzzle{
-	max-width: 662px;
-	margin: 0px;
-	padding: 0px;
-	border: solid 2px purple;
-}
-
 .container a { 
 	color: #002E2B;
  }
+
+ 
