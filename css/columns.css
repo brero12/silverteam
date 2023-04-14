@@ -137,6 +137,15 @@
 	padding: 0px;
 }
 
+.about{
+	max-width: 462px;	
+}
+
+.about iframe{ 
+	width: 100%;
+	height: 315px;
+}
+
 .container a { 
 	color: #002E2B;
  }
