@@ -96,10 +96,7 @@ class ImagePuzzle {
           );
           let now = new Date().getTime();
           helper.doc("stepCount").textContent = ++this.stepCount;
-          document.querySelector(".timeCount").textContent = parseInt(
-            (now - this.startTime) / 1000,
-            10
-          );
+          
 
           if (isSorted(vals)) {
             helper.doc("actualImageBox").innerHTML =
@@ -114,7 +111,7 @@ class ImagePuzzle {
     this.shufflePuzzle("sortable");
   }
 
-  shufflePuzzle(id){
+shufflePuzzle(id){
     let ul = document.getElementById(id);
     for (let i = ul.children.length; i >= 0; i--) {
       ul.appendChild(ul.children[(Math.random() * i) | 0]);
@@ -135,6 +132,7 @@ let helper = {
      * Timer Zone
      */
 let timerPanel = document.getElementById("timerPanel");
+let timeCount = document.querySelector(".timeCount");
 let timer = setInterval(startTime, 1000);
 let totalSeconds = 0;
 
@@ -142,6 +140,7 @@ let totalSeconds = 0;
 function startTime() {
 ++totalSeconds;
 timerPanel.innerHTML = timeParser(totalSeconds % 60);
+timeCount.textContent = timeParser(totalSeconds % 60);
 }
 
 function restartTime(){
